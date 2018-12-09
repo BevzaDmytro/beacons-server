@@ -1,0 +1,10 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+
+RewriteBase /beacons-server/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ server.php/$1
